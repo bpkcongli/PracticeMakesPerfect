@@ -64,14 +64,18 @@ def getFactors(num):
     upper_bound = num
     factors = []
 
-    while lower_bound<upper_bound:
+    while lower_bound<=upper_bound:
         if num % lower_bound == 0:
             factors.append(lower_bound)
-            upper_bound = num / lower_bound
-            factors.append(int(upper_bound))
+            upper_bound = num // lower_bound
+            factors.append(upper_bound)
         lower_bound += 1
 
     return sorted(list(set(factors)))
+
+a, b = [[int(i) for i in input().split()] for j in range(2)]
+
+print(getTotalX(a, b))
 
 """
     Challenge ini diadaptasi dari HackerRank
