@@ -61,6 +61,8 @@ def countingValleys(steps):
         
     return '{0} {1}'.format(total_mountains, total_valleys)
 
+print(countingValleys(input()))
+
 """
     Challenge ini diadaptasi dari HackerRank
     Alih bahasa oleh bpkcongli

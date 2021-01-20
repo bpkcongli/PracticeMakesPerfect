@@ -98,6 +98,8 @@ def pageCount(n, p):
 
     return min(turns)
 
+print(pageCount(int(input()), int(input())))
+
 """
     Challenge ini diadaptasi dari Hackerrank
     Alih bahasa oleh bpkcongli
