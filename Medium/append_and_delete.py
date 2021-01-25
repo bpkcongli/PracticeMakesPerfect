@@ -10,8 +10,8 @@
           string kosong akan menghasilkan string kosong juga.
 
     Diketahui integer k, dan dua buah string, s dan t. Tentukan apakah kamu
-    dapat mengkonversi string s ke string t dengan melakukan k operasi yang
-    sudah disebutkan di atas. Jika iya, cetak Yes. Jika tidak, cetak No.
+    dapat mengkonversi string s ke string t dengan melakukan persis k operasi
+    yang sudah disebutkan di atas. Jika iya, cetak Yes. Jika tidak, cetak No.
 
     Contoh:
 
@@ -27,13 +27,15 @@
         Jumlah operasi yang mungkin untuk dikembalikan Yes:
         5: Hapus 'n' dan 'a'. Tambahkan 'a', 'i', dan 'n'.
         7: Hapus seluruh karakter. Tambahkan 'm', 'a', 'i', dan 'n'.
+        Nilai di atas 7: karena diperbolehkan untuk melakukan operasi menghapus
+        karakter pada string kosong.
 
     Tugas:
     Buatlah sebuah fungsi yang akan mengembalikan 'Yes' atau 'No'. Fungsi ini
     memiliki parameter sebagai berikut:
         - s, string yang akan dilakukan operasi
         - t, target string, s akan berpatokan dengan t
-        - k, jumlah operasi yang harus dilakukan
+        - k, integer, jumlah operasi yang harus dilakukan
 
     Format Input:
     Input pertama adalah s.
@@ -53,7 +55,38 @@
     Yes
 
     Penjelasan:
-    Coming Soon
+    1. Hapus semua karakter dari string s. Jumlah operasi sementara ada 5.
+       String s sekarang menjadi string kosong.
+    2. Tambahkan karakter 'w', 'h', 'i', 't', dan 'e'. Jumlah keseluruhan
+       operasi ada 10. Jadi, untuk merubah string s ke string t dapat dilakukan
+       persis sebanyak 10 operasi.
+
+    Contoh Input:
+    paris
+    paris
+    11
+
+    Contoh Output:
+    Yes
+
+    Penjelasan:
+    1. Hapus semua karakter dari string s. Jumlah operasi sementara ada 5.
+       String s sekarang menjadi string kosong.
+    2. Lakukan sekali lagi operasi menghapus karakter. Karena menghapus karakter
+       pada string kosong, hasilnya juga adalah string kosong. Jumlah operasi
+       sementara ada 6.
+    3. Tambahkan karakter 'p', 'a', 'r', 'i', dan 's'. Jumlah keseluruhan
+       operasi ada 11. Jadi, untuk merubah string s ke string t dapat dilakukan
+       persis sebanyak 11 operasi.
+
+    Dari contoh input di atas, nilai k yang dapat menghasilkan output 'Yes':
+    - 2, hapus 's', dan tambahkan 's'.
+    - 4, hapus 's' dan 'i', dan tambahkan 'i' dan 's'.
+    - 6, hapus 's', 'i', dan 'r', dan tambahkan 'r', 'i', dan 's'.
+    - 8, hapus 's', 'i', 'r', dan 'a', dan tambahkan 'a', 'r', 'i', dan 's'.
+    - 10, hapus seluruh karakter, dan tambahkan 'p', 'a', 'r', 'i', dan 's'.
+    - Nilai di atas 10, karena diperbolehkan untuk melakukan operasi menghapus
+      karakter pada string kosong.
 """
 
 def appendAndDelete(s, t, k):
